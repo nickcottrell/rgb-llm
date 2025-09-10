@@ -65,3 +65,9 @@ See USAGE.md for details on:
 MIT — use, remix, extend.
 
 ⸻
+
+
+DEMO
+
+https://nickcottrell.github.io/rgb-llm/
+
