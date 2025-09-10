@@ -1,7 +1,3 @@
-Perfect — that’s just the default Vite scaffold README. For your open-source project you’ll want to replace it with something project-specific. Here’s a lean version you can drop in right now (and keep USAGE.md for the deeper theory):
-
-⸻
-
 RGB-LLM Prompt Mapper
 
 A minimal open-source React + Vite app for reasoning about three poles of any problem using the RGB color model. Each axis (R, G, B) represents a tension or emphasis. The sliders produce both a structured JSON output and a color swatch as intuitive feedback.
@@ -66,5 +62,3 @@ See USAGE.md for details on:
 MIT — use, remix, extend.
 
 ⸻
-
-👉 Do you want me to also include the GitHub Actions YAML snippet in the README (under “Deploy”) so contributors can see exactly what workflow file powers the Pages build?
