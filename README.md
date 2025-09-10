@@ -1,69 +1,70 @@
-# React + TypeScript + Vite
+Perfect — that’s just the default Vite scaffold README. For your open-source project you’ll want to replace it with something project-specific. Here’s a lean version you can drop in right now (and keep USAGE.md for the deeper theory):
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+⸻
 
-Currently, two official plugins are available:
+RGB-LLM Prompt Mapper
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A minimal open-source React + Vite app for reasoning about three poles of any problem using the RGB color model. Each axis (R, G, B) represents a tension or emphasis. The sliders produce both a structured JSON output and a color swatch as intuitive feedback.
 
-## Expanding the ESLint configuration
+⸻
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🚀 Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Install
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Run Dev Server
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Open http://localhost:5173.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Build
+
+npm run build
+
+The build artifacts go into dist/.
+
+⸻
+
+🌐 Deploy (GitHub Pages)
+
+This repo is prepped for GitHub Pages using Vite + Actions.
+    1.    Edit vite.config.ts and set the base to your repo name:
+
+base: '/rgb-llm/',
+
+
+    2.    Push to main.
+    3.    GitHub Actions will build and deploy automatically.
+    4.    Your site will be available at:
+
+https://<username>.github.io/rgb-llm/
+
+
+
+⸻
+
+📖 Usage
+
+See USAGE.md for details on:
+    •    How to frame opposites vs. independent poles
+    •    How to interpret the color swatch (black/white/grey/bright)
+    •    Example applications (Good vs Fast vs Cheap, Creative Writing, etc.)
+
+⸻
+
+🛠 Tech Stack
+    •    React + TypeScript
+    •    Vite (bundler, dev server)
+
+⸻
+
+📜 License
+
+MIT — use, remix, extend.
+
+⸻
+
+👉 Do you want me to also include the GitHub Actions YAML snippet in the README (under “Deploy”) so contributors can see exactly what workflow file powers the Pages build?
