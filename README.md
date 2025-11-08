@@ -60,12 +60,6 @@ See USAGE.md for details on:
 
 ⸻
 
-📜 License
-
-MIT — use, remix, extend.
-
-⸻
-
 
 DEMO
 
