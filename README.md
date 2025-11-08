@@ -65,3 +65,10 @@ DEMO
 
 https://nickcottrell.github.io/rgb-llm/
 
+
+
+## License and Usage
+This repository is provided for demonstration and educational purposes only.  
+All rights reserved.  
+No part of this project may be used, copied, modified, or distributed without explicit written permission.
+
