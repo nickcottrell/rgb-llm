@@ -1,74 +1,194 @@
-RGB-LLM Prompt Mapper
+# RGB-LLM
 
-A minimal open-source React + Vite app for reasoning about three poles of any problem using the RGB color model. Each axis (R, G, B) represents a tension or emphasis. The sliders produce both a structured JSON output and a color swatch as intuitive feedback.
+*A tiny tool for thinking in color — and a first experiment toward VRGB.*
 
-⸻
+RGB-LLM is a minimal React + Vite interface for blending **three poles** of a problem into a single RGB vector.
+Slide → blend → interpret the resulting color → export a JSON signal.
 
-🚀 Getting Started
+It’s not a framework or a system.
+It’s a **calibration layer** — a lightweight tool for reasoning about tradeoffs, direction, and emphasis.
 
-Install
+Use it for:
 
+* creative prompts
+* lightweight state cues
+* multi-step workflows
+* decision framing
+* metadata for demos (e.g., Magic Fridge)
+
+---
+
+## 🌈 What is VRGB?
+
+**VRGB** is the conceptual layer behind this repo —
+
+> a low-dimensional vector space (color) used as a small shared signal surface for AI workflows.
+
+RGB-LLM is the first UI for experimenting with that idea.
+
+The motivating question:
+
+**Can a tiny, bounded vector — literally R/G/B — carry useful micro-intent between AI modules without schema overhead or complex preference tables?**
+
+This repo exists so I can explore that publicly.
+
+---
+
+## 🌱 Why This Exists
+
+In multi-step AI workflows, the missing layer is often the simplest one:
+the **small signals** that shape behavior between tools.
+
+Signals like:
+
+* “be more strict”
+* “lean creative”
+* “reduce detail”
+* “keep tone consistent”
+
+VRGB proposes a weirdly simple approach:
+a **three-number vector** that encodes these shifts continuously.
+
+RGB-LLM is a tiny interface for generating that vector.
+
+---
+
+## 🧠 The Deeper (Experimental) Idea
+
+High-dimensional embeddings are great, but:
+
+* expensive to serialize
+* hard to inspect
+* brittle across modules
+* difficult to align
+* not human-interpretable
+
+VRGB flips the model:
+
+### **A low-dimensional surface with useful properties:**
+
+* bounded (0–1 floats)
+* continuous gradients
+* cheap to transmit
+* easy to visualize
+* vector-operable
+* stable under drift
+
+It won’t replace embeddings —
+it *complements* them for the small, continuous cues that keep tools coherent.
+
+This is a **“what if?”** experiment:
+
+**What if 3D color space is the right dimensionality for micro-intent?**
+
+RGB-LLM is how I explore that.
+
+---
+
+## 🧩 How It Works
+
+```
+[ Your Poles ]
+   R     G     B
+    ↓    ↓    ↓
+[ RGB-LLM UI ]   ← adjust sliders
+    ↓
+Color Swatch      ← intuitive feedback
+    ↓
+{ "r": 0.42, "g": 0.79, "b": 0.12 }   ← VRGB vector
+    ↓
+Downstream prompt / model / workflow
+```
+
+A tiny vector carrying directional meaning.
+
+---
+
+## 🚀 Getting Started
+
+### Install
+
+```sh
 npm install
+```
 
-Run Dev Server
+### Run Dev Server
 
+```sh
 npm run dev
+```
 
-Open http://localhost:5173.
+Open:
+`http://localhost:5173`
 
-Build
+### Build
 
+```sh
 npm run build
+```
 
-The build artifacts go into dist/.
+Build output goes to `dist/`.
 
+---
 
+## 🌐 Deploy to GitHub Pages
 
+1. Edit `vite.config.ts`:
 
-⸻
+```ts
+base: '/rgb-llm/'
+```
 
-🌐 Deploy (GitHub Pages)
+2. Commit & push
+3. GitHub Actions auto-deploys
+4. Visit:
+   `https://<username>.github.io/rgb-llm/`
 
-This repo is prepped for GitHub Pages using Vite + Actions.
-    1.    Edit vite.config.ts and set the base to your repo name:
+---
 
-base: '/rgb-llm/',
+## 📖 Usage
 
+See **USAGE.md** for:
 
-    2.    Push to main.
-    3.    GitHub Actions will build and deploy automatically.
-    4.    Your site will be available at:
+* poles vs. opposites
+* interpreting the color swatch
+* JSON output examples
+* creative + technical use cases
 
-https://<username>.github.io/rgb-llm/
+---
 
+## 🛠 Tech Stack
 
+* React
+* TypeScript
+* Vite
 
-⸻
+---
 
-📖 Usage
+# 📜 License
 
-See USAGE.md for details on:
-    •    How to frame opposites vs. independent poles
-    •    How to interpret the color swatch (black/white/grey/bright)
-    •    Example applications (Good vs Fast vs Cheap, Creative Writing, etc.)
+RGB-LLM is released under the **MIT License**.
+You are free to use, fork, modify, and build on this work.
 
-⸻
+### ❤️ A personal note (optional, non-binding)
 
-🛠 Tech Stack
-    •    React + TypeScript
-    •    Vite (bundler, dev server)
+If you explore the VRGB concept or build something interesting with this repo,
+I’d *love* to hear what you discover.
 
-⸻
+Not for credit or control —
+just genuine curiosity about how others think about low-dimensional reasoning.
+
+Feel free to open an issue, share a link, or reach out anytime.
+
+---
+
+## 📬 Contact
+
+GitHub Issues • LinkedIn
+Happy to collaborate, learn, and exchange ideas.
+
 
 
 DEMO
-
 https://nickcottrell.github.io/rgb-llm/
-
-
-
-## License and Usage
-This repository is provided for demonstration and educational purposes only.  
-All rights reserved.  
-No part of this project may be used, copied, modified, or distributed without explicit written permission.
 
