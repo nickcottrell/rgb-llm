@@ -1,6 +1,6 @@
 # RGB-LLM
 
-*A tiny tool for thinking in color — and a first experiment toward VRGB.*
+*A tiny tool for thinking and reasoning in color — and a first experiment toward VRGB.*
 
 RGB-LLM is a minimal interface for blending **three poles** of a problem into a single RGB vector.
 Slide → blend → interpret the resulting color → export a JSON signal.
