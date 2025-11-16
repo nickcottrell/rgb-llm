@@ -170,7 +170,7 @@ See **USAGE.md** for:
 RGB-LLM is released under the **MIT License**.
 You are free to use, fork, modify, and build on this work.
 
-### ❤️ A personal note (optional, non-binding)
+### Personal note
 
 If you explore the VRGB concept or build something interesting with this repo,
 I’d *love* to hear what you discover.
