@@ -2,12 +2,144 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>RGB LLM Demo</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="container">
+      <header>
+        <h1>RGB LLM Demo</h1>
+        <nav>
+          <button data-target="sliders">Sliders Config</button>
+          <button data-target="madlibs">Mad Libs Config</button>
+        </nav>
+      </header>
+
+      <!-- Sliders Config -->
+      <section id="sliders" class="config-section" data-section>
+        <div class="section-header">
+          <h2>Sliders Configuration</h2>
+          <button class="copy-btn" data-target="sliders-output">Copy JSON</button>
+        </div>
+
+        <div class="dimension-card">
+          <h3 class="dimension-title">🎚️ Axis 1</h3>
+          <p class="dimension-description">Define the first dimension of your thought space</p>
+
+          <div class="axis">
+            <div class="slider-label">
+              <span><input type="text" id="rigor-left" value="Rigor"></span>
+              <span><input type="text" id="rigor-right" value="Play"></span>
+            </div>
+            <div class="slider-track">
+              <div class="slider-gradient" style="background: linear-gradient(90deg, #3498db 0%, #9b59b6 100%);"></div>
+              <div class="slider-wrapper">
+                <input type="range" id="rigor" min="0" max="100" value="50">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dimension-card">
+          <h3 class="dimension-title">🎚️ Axis 2</h3>
+          <p class="dimension-description">Define the second dimension of your thought space</p>
+
+          <div class="axis">
+            <div class="slider-label">
+              <span><input type="text" id="human-left" value="Human"></span>
+              <span><input type="text" id="human-right" value="Machine"></span>
+            </div>
+            <div class="slider-track">
+              <div class="slider-gradient" style="background: linear-gradient(90deg, #e74c3c 0%, #34495e 100%);"></div>
+              <div class="slider-wrapper">
+                <input type="range" id="human" min="0" max="100" value="50">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dimension-card">
+          <h3 class="dimension-title">🎚️ Axis 3</h3>
+          <p class="dimension-description">Define the third dimension of your thought space</p>
+
+          <div class="axis">
+            <div class="slider-label">
+              <span><input type="text" id="scale-left" value="Scale"></span>
+              <span><input type="text" id="scale-right" value="Detail"></span>
+            </div>
+            <div class="slider-track">
+              <div class="slider-gradient" style="background: linear-gradient(90deg, #27ae60 0%, #f39c12 100%);"></div>
+              <div class="slider-wrapper">
+                <input type="range" id="scale" min="0" max="100" value="50">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Output JSON</h3>
+        <pre id="sliders-output">{}</pre>
+      </section>
+
+      <!-- Mad Libs Config -->
+      <section id="madlibs" class="config-section hidden" data-section hidden>
+        <div class="section-header">
+          <h2>Mad Libs Prompt Builder</h2>
+          <button class="copy-btn" data-target="madlibs-output">Copy JSON</button>
+        </div>
+
+        <div class="dimension-card">
+          <h3 class="dimension-title">📝 Story Template</h3>
+          <p class="dimension-description">Fill in the blanks to create your custom prompt template</p>
+
+          <p class="madlib-sentence">
+            Write a <input type="text" id="genre" placeholder="genre (e.g. sci-fi)">
+            story about <input type="text" id="character" placeholder="main character">
+            who <input type="text" id="action" placeholder="does something">
+            in a <input type="text" id="setting" placeholder="setting">.
+          </p>
+        </div>
+
+        <div class="dimension-card">
+          <h3 class="dimension-title">🎚️ Style Axes</h3>
+          <p class="dimension-description">Control the tone and complexity of the generated content</p>
+
+          <div class="axis">
+            <div class="slider-label">
+              <span><input type="text" id="axis1-left" value="Whimsical"></span>
+              <span><input type="text" id="axis1-right" value="Serious"></span>
+            </div>
+            <div class="slider-track">
+              <div class="slider-gradient" style="background: linear-gradient(90deg, #f39c12 0%, #8e44ad 100%);"></div>
+              <div class="slider-wrapper">
+                <input type="range" id="axis1" min="0" max="100" value="50">
+              </div>
+            </div>
+          </div>
+
+          <div class="axis">
+            <div class="slider-label">
+              <span><input type="text" id="axis2-left" value="Simple"></span>
+              <span><input type="text" id="axis2-right" value="Complex"></span>
+            </div>
+            <div class="slider-track">
+              <div class="slider-gradient" style="background: linear-gradient(90deg, #3498db 0%, #e74c3c 100%);"></div>
+              <div class="slider-wrapper">
+                <input type="range" id="axis2" min="0" max="100" value="50">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Output JSON</h3>
+        <pre id="madlibs-output">{}</pre>
+      </section>
+
+      <footer>
+        <p>Pedals for ideas 🎛</p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
